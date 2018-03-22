@@ -1,0 +1,49 @@
+\documentclass[12pt]{report}
+    \usepackage[francais]{babel}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{graphicx}
+    \usepackage{tocbibind}
+    \usepackage{minted}
+    \usepackage[pdftex,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+    \usepackage{anysize}
+    \usepackage{icomma}
+    \usepackage[pagestyles]{titlesec}
+    \usepackage{titlesec}
+    \usepackage{hyperref}
+    
+    \marginsize{15mm}{14mm}{12mm}{18mm}
+    \usemintedstyle{vs}
+    \DeclareGraphicsExtensions{.jpg,.pdf,.png,.PNG}
+    \fboxsep=0mm%padding thickness
+    \fboxrule=1pt%border thickness
+    % Chapters titles
+    \titleformat{\chapter}[block]{\Large\bfseries}{\thechapter}{1em}{}
+    \titleformat{\section}[block]{\large\bfseries}{\thesection}{1em}{}
+    \titleformat{\subsection}[block]{\bfseries}{\thesubsection}{1em}{}
+    % Delete some spaces between the chapter title and the top of the page
+    \titlespacing*{\chapter}{0pt}{-50pt}{40pt}
+    \begin{document}
+    \begin{titlepage}
+    \begin{center}
+    ~\\[3\baselineskip]
+    
+    % Title
+    \rule{\linewidth}{0.5mm} \\[0.4cm]
+    { \huge \bfseries Favorite Writing Prompts\\[0.4cm] }
+    \rule{\linewidth}{0.5mm} \\[1.5cm]
+    
+    
+    \vfill
+    % Bottom of the page
+    \end{center}
+    \end{titlepage}
+    \clearpage
+    
+    \newpage
+    \renewcommand{\baselinestretch}{1.30}\small \normalsize
+    \tableofcontents
+    \renewcommand{\baselinestretch}{1.18}\small \normalsize
+    \include{Pages/Page1}
+    
+    \end{document}
